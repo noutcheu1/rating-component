@@ -1,0 +1,351 @@
+/*
+
+## Colors
+
+### Primary
+
+- Orange: hsl(25, 97%, 53%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Light Grey: hsl(217, 12%, 63%)
+- Medium Grey: hsl(216, 12%, 54%)
+- Dark Blue: hsl(213, 19%, 18%)
+- Very Dark Blue: hsl(216, 12%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (paragraph): 15px
+
+### Font
+
+- Family: [Overpass](https://fonts.google.com/specimen/Overpass)
+- Weights: 400, 700
+
+ */
+
+:root {
+    --primary-orange: hsl(25, 97%, 53%);
+    --primary-white: hsl(0, 0%, 100%);
+    --primary-light-grey: hsl(217, 12%, 63%);
+    --medium-grey: hsl(216, 12%, 54%);
+    --dark-blue: hsl(213, 19%, 18%);
+    --very-dark-blue: hsl(216, 12%, 8%);
+}
+
+* {
+
+    color: var(--primary-light-grey);
+    font-family: Overpass, sans-serif;
+    font-weight: 400;
+
+    line-height: 31px;
+}
+
+p {
+    font-size: 15px;
+    margin: 10px 25px 10px 25px;
+
+}
+
+body {
+    background-color: var(--very-dark-blue);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding-top: 176px;
+
+}
+
+#get {
+
+
+}
+
+#post {
+    /*position: absolute;*/
+    /*top: 63%;*/
+    /*left: 50%;*/
+    /*margin-top: -115px;*/
+    /*transform: translate(-50%, -50%);*/
+    /* display: none;*/
+    display: none;
+}
+
+.form, .form-rate {
+    display: flex;
+    justify-content: center;
+    border-radius: 30px;
+    flex-direction: column;
+
+    width: 470px;
+    height: 500px;
+    background-color: var(--dark-blue);
+}
+
+.form-rate {
+    align-items: center;
+
+}
+
+.start {
+    margin: 0 0 25px 25px;
+    background-color: hsla(216, 12%, 54%, 10%);
+    width: 50px;
+    border-radius: 100px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.start-thanks {
+    margin: 20px 20px 20px 20px;
+    padding: 5px 18px 4px 18px;
+
+}
+
+.start-thanks img {
+    margin-top: -36px;
+}
+
+.response {
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 3px 6px 3px 6px;
+    color: var(--primary-orange);
+    border-radius: 15px;
+    background-color: hsla(216, 12%, 54%, 10%);
+}
+
+
+h1 {
+    margin: 5px 0 5px 25px;
+    font-weight: 700;
+    color: var(--primary-white);
+}
+
+.rate {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 0;
+
+}
+
+.rating_value {
+    border-radius: 100px;
+    background-color: hsla(216, 12%, 54%, 10%);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating_value:hover {
+    background-color: hsla(216, 12%, 54%, 50%);
+    color: var(--primary-white);
+    cursor: pointer;
+}
+
+.active {
+    background-color: var(--primary-orange);
+    color: var(--primary-white);
+    cursor: pointer;
+}
+
+.send {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--primary-white);
+    background-color: var(--primary-orange);
+    border-radius: 40px;
+    padding: 10px 0 10px 0;
+    margin: 20px 29px 20px 24px;
+    font-size: 20px;
+}
+
+.send:hover {
+    background-color: var(--primary-white);
+    color: var(--primary-orange);
+    cursor: pointer;
+}
+
+.submit {
+    padding-right: 9px;
+    padding-left: 8px;
+    padding-bottom: 0;
+    margin-bottom: -34px;
+    margin-top: 12px;
+}
+
+.description {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-bottom: -11px;
+    padding-bottom: -16px;
+
+}
+
+.description p {
+    font-size: 19px;
+}
+
+.description h1 {
+    margin-bottom: 23px;
+    padding-bottom: 0px;
+    padding-top: 4px;
+    margin-top: 3px;
+    font-size: 40px;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .form, .form-rate {
+        max-width: 450px;
+        width: 400px;
+        height: 100%;
+    }
+
+    .form {
+        display: flex;
+        justify-content: center;
+        border-radius: 30px;
+        flex-direction: column;
+
+        background-color: var(--dark-blue);
+    }
+
+    .form-rate {
+
+        justify-content: center;
+        border-radius: 30px;
+        flex-direction: column;
+        background-color: var(--dark-blue);
+
+    }
+
+    .start-thanks img {
+        margin-top: 5px;
+    }
+
+    .start {
+        margin-top: 22px;
+    }
+
+
+    h1 {
+        margin: 5px 0 5px 25px;
+        font-weight: 700;
+        color: var(--primary-white);
+    }
+
+
+    .submit {
+        padding-right: 9px;
+        padding-left: 8px;
+        padding-bottom: 50px;
+        margin-bottom: -34px;
+        margin-top: 12px;
+    }
+
+    .description {
+
+        padding-bottom: 35px;
+
+    }
+
+    .description p {
+        font-size: 13px;
+    }
+
+    .description h1 {
+        margin-bottom: 23px;
+        padding-bottom: 0;
+        padding-top: 4px;
+        margin-top: 3px;
+        font-size: 20px;
+    }
+
+}
+
+
+@media only screen and (max-width: 435px) {
+    .form, .form-rate {
+        max-width: 350px;
+        width: 340px;
+        height: 100%;
+    }
+    .rate {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        list-style: none;
+        display: grid;
+        gap: 20px;
+        padding: 0;
+
+    }
+}
+
+
+@media only screen and (max-width: 360px) {
+    .form, .form-rate {
+        max-width: 310px;
+        width: 300px;
+        height: 100%;
+    }
+
+    .rate {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        list-style: none;
+        display: grid;
+        gap: 20px;
+        padding: 0;
+
+    }
+
+    /*.rating_value {*/
+    /*    border-radius: 100px;*/
+    /*    background-color: hsla(216, 12%, 54%, 10%);*/
+    /*    width: 50px;*/
+    /*    height: 50px;*/
+    /*    display: flex;*/
+    /*    justify-content: center;*/
+    /*    align-items: center;*/
+    /*}*/
+
+}
+
+
+@media only screen and (max-width: 325px) {
+    .form, .form-rate {
+        max-width: 300px;
+        width: 290px;
+        height: 100%;
+    }
+
+}
